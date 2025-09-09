@@ -12,7 +12,6 @@ url = URL + "?q=" + city_name + "&appid=" + api_key + "&units=" + units
 
 response = requests.get(url)
 data = response.json()
-print (data)
 
 if data["cod"] == 200:
     name = data["name"]
