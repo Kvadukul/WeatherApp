@@ -7,6 +7,10 @@ Simple Python Program that fetches weather data from a free API called OpenWeath
   This report contains Temperature, wind speed, sea level and a description
   Also Handles errors for invalid names of cities and server issues
 
+  Updated Features:
+  Now contains an option after weather report that allows users to check a 5day weather report of the city/town the user picked
+  Added new error handling for forecasting
+  New OpenWeather API for forecast
 
   Requires:
   Need Requests Library
