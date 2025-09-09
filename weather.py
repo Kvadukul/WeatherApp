@@ -18,7 +18,7 @@ if data["cod"] == 200:
     name = data["name"]
     temp = data["main"]["temp"]
     desc = data["weather"][0]["description"]
-    sea = data["main]["sea_level"]
+    sea = data["main"]["sea_level"]
     
     print(f"Weather in {name}: {temp}°C, {desc}, Sea Level is {sea}")
 else if data["cod"] == 404:
