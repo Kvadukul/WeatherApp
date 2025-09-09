@@ -36,7 +36,7 @@ if data["cod"] == 200:
                     temp = entry["main"]["temp"]   
                     print(f"{date}: {temp}°C")
                 else:
-                    print("\nOk")
+                    
 
 
 
