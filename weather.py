@@ -18,8 +18,9 @@ if data["cod"] == 200:
     temp = data["main"]["temp"]
     desc = data["weather"][0]["description"]
     sea = data["main"]["sea_level"]
+    wind = data["wind"]["speed"]
     
-    print(f"Weather in {name}: {temp}°C, {desc}, Sea Level is {sea}")
+    print(f"Weather in {name}: {temp}°C, {desc}, Sea Level is {sea}, Wind Speed is {wind}m/s")
 elif data["cod"] == 404:
     print("City not found.")
 else:
