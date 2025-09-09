@@ -24,7 +24,7 @@ if data["cod"] == 200:
     
     option= input("Would you like to see the 5 day forecast?  (y/n) ").lower()
     if option == "y":
-        url = ForecastURL + "?q=" + city_name + "&appid=" + api_key + "&units=" + units
+        forecast_url = ForecastURL + "?q=" + city_name + "&appid=" + api_key + "&units=" + units
         forecast_response = requests.get(ForecastURL)
         forecast_data = forecast_response.json()
 
