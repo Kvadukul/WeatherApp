@@ -27,15 +27,16 @@ if data["cod"] == 200:
         url = ForecastURL + "?q=" + city_name + "&appid=" + api_key + "&units=" + units
         forecast_response = requests.get(ForecastURL)
         forecast_data = forecast_response.json()
-        print(f"\n5-Day Forecast for {name}:\n")
-        
-        for entry in forecast_data["list"]:
-            if entry["dt_txt"].endswith("12:00:00"): 
-                date = entry["dt_txt"][:10]
-                temp = entry["main"]["temp"]   
-                print(f"{date}: {temp}°C")
-            else:
-                print("\nOk")
+
+        if int(forecast_data["cod"]) == 200:
+            print(f"\n5-Day Forecast for {name}:\n")
+            for entry in forecast_data["list"]:
+                if entry["dt_txt"].endswith("12:00:00"): 
+                    date = entry["dt_txt"][:10]
+                    temp = entry["main"]["temp"]   
+                    print(f"{date}: {temp}°C")
+                else:
+                    print("\nOk")
 
 
 
